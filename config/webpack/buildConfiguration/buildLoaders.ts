@@ -6,5 +6,9 @@ export const buildLoaders = (): webpack.RuleSetRule[] => {
     use: 'ts-loader',
     exclude: /node_modules/,
   }
-  return [typescriptLoader]
+  const scssLoader = {
+    test: /\.s[ac]ss$/i,
+    use: ['style-loader', 'css-loader', 'sass-loader'],
+  }
+  return [typescriptLoader, scssLoader]
 }
