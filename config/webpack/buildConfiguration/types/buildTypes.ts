@@ -9,4 +9,9 @@ export interface BuildOptions {
   mode: BuildMode
   paths: BuildPaths
   isDev: boolean
+  port: number
+}
+export interface BuildEnvironmentVariables {
+  port: number | undefined
+  mode: BuildMode | undefined
 }

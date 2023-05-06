@@ -1,7 +1,12 @@
 import path from 'path'
-import { BuildOptions } from './types'
 import webpack from 'webpack'
-import { buildPlugins, buildLoaders, buildResolvers } from './index'
+import {
+  buildPlugins,
+  buildLoaders,
+  buildResolvers,
+  buildDevServer,
+} from './index'
+import { BuildOptions } from './types'
 
 export const buildWebpackConfig = (
   options: BuildOptions
@@ -9,6 +14,8 @@ export const buildWebpackConfig = (
   const {
     mode,
     paths: { indexHTML, output, entry },
+    port,
+    isDev,
   } = options
   return {
     mode: mode,
@@ -23,5 +30,7 @@ export const buildWebpackConfig = (
       rules: buildLoaders(),
     },
     resolve: buildResolvers(),
+    devtool: isDev ? 'inline-source-map' : undefined,
+    devServer: isDev ? buildDevServer({ port }) : undefined,
   }
 }
