@@ -1,4 +1,3 @@
-import path from 'path'
 import webpack from 'webpack'
 import {
   buildPlugins,
@@ -29,7 +28,7 @@ export const buildWebpackConfig = (
     module: {
       rules: buildLoaders({ isDev }),
     },
-    resolve: buildResolvers(),
+    resolve: buildResolvers(options),
     devtool: isDev ? 'inline-source-map' : undefined,
     devServer: isDev ? buildDevServer({ port }) : undefined,
   }

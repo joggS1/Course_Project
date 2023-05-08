@@ -3,6 +3,7 @@ export interface BuildPaths {
   entry: string
   output: string
   indexHTML: string
+  src: string
 }
 
 export interface BuildOptions {
