@@ -12,7 +12,7 @@ export const buildWebpackConfig = (
 ): webpack.Configuration => {
   const {
     mode,
-    paths: { indexHTML, output, entry },
+    paths: { output, entry },
     port,
     isDev,
   } = options
@@ -24,7 +24,7 @@ export const buildWebpackConfig = (
       path: output,
       clean: true,
     },
-    plugins: buildPlugins({ indexHTML }),
+    plugins: buildPlugins(options),
     module: {
       rules: buildLoaders({ isDev }),
     },

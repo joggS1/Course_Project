@@ -1,5 +1,10 @@
 declare module '*.module.css'
-declare module '*.module.scss'
+declare module '*.module.scss' {
+  const classes: { [key: string]: string }
+  export default classes
+}
+
+declare const __IS_DEV__: boolean
 
 declare module '*.svg' {
   import React from 'react'

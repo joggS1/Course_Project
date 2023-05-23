@@ -1,5 +1,8 @@
+import { useTranslation } from 'react-i18next'
+
 const MainPage = () => {
-  return <div style={{ padding: 10 }}>Main Page</div>
+  const { t } = useTranslation('main')
+  return <div style={{ padding: 10 }}>{t('заголовок')}</div>
 }
 
 export default MainPage

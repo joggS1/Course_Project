@@ -1,4 +1,10 @@
 {
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "i18n-ally.localesPaths": ["public/locales", "src/shared/config/i18n"],
+  "i18n-ally.sourceLanguage": "russian",
+  "i18n-ally.regex.key": ".*?",
+  "i18n-ally.keystyle": "flat",
+  "i18n-ally.namespace": false
+  // "i18n-ally.keystyle": "nested"
 }

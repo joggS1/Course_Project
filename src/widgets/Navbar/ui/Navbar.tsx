@@ -1,8 +1,7 @@
 import { classNames } from '@/shared/lib'
 import styles from './Navbar.module.scss'
-import { Link } from 'react-router-dom'
 import { AppLink } from '@/shared/ui/AppLink'
-import { ThemeSwitcher } from '@/widgets/ThemeSwitcher'
+import { useTranslation } from 'react-i18next'
 
 interface NavbarProps {
   className?: string
@@ -10,18 +9,18 @@ interface NavbarProps {
 
 export const Navbar = (props: NavbarProps) => {
   const { className } = props
+  const { t } = useTranslation()
   return (
     <nav className={classNames(styles.Navbar, {}, [className])}>
-      <ThemeSwitcher />
       <ul className={classNames(styles.Menu_items, {}, [])}>
         <li>
           <AppLink type="secondary" to={'/'}>
-            Main
+            {t('страницы.главная')}
           </AppLink>
         </li>
         <li>
           <AppLink type="secondary" to={'/about'}>
-            About
+            {t('страницы.онас')}
           </AppLink>
         </li>
       </ul>
