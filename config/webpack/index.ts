@@ -1,1 +1,1 @@
-export * from './buildConfiguration'
+export * from './buildConfiguration';

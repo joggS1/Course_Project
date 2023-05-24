@@ -1,1 +1,1 @@
-export * from './buildTypes'
+export * from './buildTypes';

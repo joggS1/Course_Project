@@ -1,2 +1,2 @@
-export * from './About/index'
-export * from './Main/index'
+export * from './About/index';
+export * from './Main/index';
