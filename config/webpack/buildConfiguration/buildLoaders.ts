@@ -22,6 +22,22 @@ export const buildLoaders = ({
       },
     ],
   }
+  const babelLoader = {
+    test: /\.(?:ts|js|tsx)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: 'babel-loader',
+      options: {
+        presets: ['@babel/preset-env'],
+        plugins: [
+          [
+            'i18next-extract',
+            { locales: ['ru', 'en'], keyAsDefaultValue: true },
+          ],
+        ],
+      },
+    },
+  }
   const styleLoader = isDev ? 'style-loader' : MiniCssExtractPlugin.loader
   const cssLoader = {
     loader: 'css-loader',
@@ -38,5 +54,5 @@ export const buildLoaders = ({
     test: /\.s[ac]ss$/i,
     use: [styleLoader, cssLoader, 'sass-loader'],
   }
-  return [fileLoader, svgLoader, typescriptLoader, styleLoaders]
+  return [fileLoader, svgLoader, babelLoader, typescriptLoader, styleLoaders]
 }
