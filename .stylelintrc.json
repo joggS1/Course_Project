@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "indentation": 4,
+    "string-quotes": "single",
+    "selector-class-pattern": null,
+    "selector-combinator-space-after": "always",
+    "selector-combinator-space-before": "always",
+    "no-missing-end-of-source-newline": true
+  }
+}

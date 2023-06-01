@@ -7,28 +7,28 @@ import { buildResolvers } from './buildResolvers';
 import type { BuildOptions } from './types';
 
 export const buildWebpackConfig = (options: BuildOptions): webpack.Configuration => {
-  const {
-    mode,
-    paths: { output, entry },
-    port,
-    isDev
-  } = options;
-  return {
-    devServer: isDev ? buildDevServer({ port }) : undefined,
-    devtool: isDev ? 'inline-source-map' : undefined,
-    entry,
-    mode,
-    module: {
-      rules: buildLoaders({ isDev })
-    },
-    output: {
-      clean: true,
-      filename: '[name].[contenthash].js',
-      path: output
-    },
+    const {
+        mode,
+        paths: { output, entry },
+        port,
+        isDev
+    } = options;
+    return {
+        devServer: isDev ? buildDevServer({ port }) : undefined,
+        devtool: isDev ? 'inline-source-map' : undefined,
+        entry,
+        mode,
+        module: {
+            rules: buildLoaders({ isDev })
+        },
+        output: {
+            clean: true,
+            filename: '[name].[contenthash].js',
+            path: output
+        },
 
-    plugins: buildPlugins(options),
+        plugins: buildPlugins(options),
 
-    resolve: buildResolvers(options)
-  };
+        resolve: buildResolvers(options)
+    };
 };

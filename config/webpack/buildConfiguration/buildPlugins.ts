@@ -6,23 +6,23 @@ import webpack from 'webpack';
 import type { BuildOptions } from './types';
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
-  const {
-    isDev,
-    paths: { indexHTML }
-  } = options;
-  return [
-    new HtmlWebpackPlugin({
-      template: indexHTML
-    }),
-    new webpack.ProgressPlugin(),
-    new MiniCssExtractPlugin({
-      filename: './css/[name].[contenthash:8].css',
-      chunkFilename: './css/[name].[contenthash:8].css'
-    }),
-    new webpack.DefinePlugin({
-      IS_DEV: JSON.stringify(isDev)
-    }),
-    new webpack.HotModuleReplacementPlugin({}),
-    new ReactRefreshWebpackPlugin()
-  ];
+    const {
+        isDev,
+        paths: { indexHTML }
+    } = options;
+    return [
+        new HtmlWebpackPlugin({
+            template: indexHTML
+        }),
+        new webpack.ProgressPlugin(),
+        new MiniCssExtractPlugin({
+            filename: './css/[name].[contenthash:8].css',
+            chunkFilename: './css/[name].[contenthash:8].css'
+        }),
+        new webpack.DefinePlugin({
+            IS_DEV: JSON.stringify(isDev)
+        }),
+        new webpack.HotModuleReplacementPlugin({}),
+        new ReactRefreshWebpackPlugin()
+    ];
 };

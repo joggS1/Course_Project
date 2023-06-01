@@ -6,17 +6,17 @@ import { Button } from '@/shared/ui/Button';
 import styles from './ThemeSwitcher.module.scss';
 
 interface ThemeSwitcherProps {
-  className?: string;
+    className?: string;
 }
 
 export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
-  const { className } = props;
-  const { toggleTheme, theme } = useTheme();
-  return (
-    <div className={classNames(styles.ThemeSwitcher, {}, [className])}>
-      <Button theme='outlined' onClick={toggleTheme}>
-        <ThemeIcon fill={theme !== Theme.DARK ? '#000' : '#fff'} />
-      </Button>
-    </div>
-  );
+    const { className } = props;
+    const { toggleTheme, theme } = useTheme();
+    return (
+        <div className={classNames(styles.ThemeSwitcher, {}, [className])}>
+            <Button theme='outlined' onClick={toggleTheme}>
+                <ThemeIcon fill={theme !== Theme.DARK ? '#000' : '#fff'} />
+            </Button>
+        </div>
+    );
 };

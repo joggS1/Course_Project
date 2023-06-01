@@ -2,7 +2,7 @@
     cursor: pointer;
     color: var(--secondary-color);
 
-    &>svg {
+    & > svg {
         vertical-align: middle;
     }
 }
@@ -16,6 +16,6 @@
     outline: none;
 }
 
-.primary {}
+// .primary {}
 
-.secondary {}
+// .secondary {}

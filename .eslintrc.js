@@ -5,7 +5,8 @@ module.exports = {
         'airbnb-typescript',
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
-        'prettier'
+        'prettier',
+        'plugin:i18next/recommended'
     ],
     env: {
         browser: true,
@@ -24,7 +25,7 @@ module.exports = {
         ecmaVersion: 'latest',
         sourceType: 'module'
     },
-    plugins: [],
+    plugins: ['i18next'],
     rules: {
         '@typescript-eslint/no-shadow': 0,
         '@typescript-eslint/consistent-type-imports': [
@@ -90,6 +91,7 @@ module.exports = {
                     order: 'asc'
                 }
             }
-        ]
+        ],
+        'i18next/no-literal-string': ['error', {markupOnly: true}]
     }
 };
