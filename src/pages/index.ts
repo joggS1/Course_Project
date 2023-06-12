@@ -1,2 +1,3 @@
-export * from './About/index';
-export * from './Main/index';
+export * from './About';
+export * from './Main';
+export * from './404Page';

@@ -2,7 +2,7 @@ import path from 'path';
 
 import type webpack from 'webpack';
 
-import type { BuildPaths, BuildEnvironmentVariables } from './config';
+import type { BuildEnvironmentVariables, BuildPaths } from './config';
 import { buildWebpackConfig } from './config';
 
 export default (env: BuildEnvironmentVariables) => {

@@ -1,4 +1,3 @@
-import './styles/index.scss';
 import { Suspense } from 'react';
 
 import { classNames } from '@/shared/lib';
@@ -7,6 +6,7 @@ import { Sidebar } from '@/widgets/Sidebar';
 
 import { useTheme } from './providers/ThemeProvider';
 import { AppRouter } from './providers/router';
+import './styles/index.scss';
 
 export const App = () => {
     const { theme } = useTheme();
