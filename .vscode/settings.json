@@ -5,6 +5,7 @@
   "i18n-ally.sourceLanguage": "russian",
   "i18n-ally.regex.key": ".*?",
   "i18n-ally.keystyle": "flat",
-  "i18n-ally.namespace": false
+  "i18n-ally.namespace": false,
+  "vscode-pets.throwBallWithMouse": true
   // "i18n-ally.keystyle": "nested"
 }

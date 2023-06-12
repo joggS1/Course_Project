@@ -5,6 +5,7 @@ import { AboutPage, MainPage } from '@/pages';
 import { RouterConfig } from '@/shared/config/routerConfig';
 
 export const AppRouter = () => (
+    // eslint-disable-next-line
     <Suspense fallback={<div>loading</div>}>
         <Routes>
             {Object.values(RouterConfig).map(({ path, element }) => (

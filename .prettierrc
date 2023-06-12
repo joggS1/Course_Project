@@ -4,8 +4,7 @@
     "jsxSingleQuote": true,
     "arrowParens": "always",
     "useTabs": false,
-    "printWidth": 100,
+    "printWidth": 80,
     "trailingComma": "none",
-    "semi": true,
-    "insertFinalNewLine": true
+    "semi": true
 }

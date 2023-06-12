@@ -10,7 +10,8 @@ module.exports = {
     ],
     env: {
         browser: true,
-        es2021: true
+        es2021: true,
+        jest: true
     },
     overrides: [{
         files: ['*.ts', '*.tsx'],
@@ -92,6 +93,7 @@ module.exports = {
                 }
             }
         ],
-        'i18next/no-literal-string': ['error', {markupOnly: true}]
+        'i18next/no-literal-string': ['error', {markupOnly: true}],
+        'max-len': ['error', { "ignoreComments" : true}]
     }
 };

@@ -5,7 +5,9 @@ import webpack from 'webpack';
 
 import type { BuildOptions } from './types';
 
-export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
+export const buildPlugins = (
+    options: BuildOptions
+): webpack.WebpackPluginInstance[] => {
     const {
         isDev,
         paths: { indexHTML }
