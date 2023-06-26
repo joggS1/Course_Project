@@ -5,9 +5,7 @@ import webpack from 'webpack';
 
 import type { BuildOptions } from './types';
 
-export const buildPlugins = (
-    options: BuildOptions
-): webpack.WebpackPluginInstance[] => {
+export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
     const {
         isDev,
         paths: { indexHTML }
@@ -25,6 +23,6 @@ export const buildPlugins = (
             IS_DEV: JSON.stringify(isDev)
         }),
         new webpack.HotModuleReplacementPlugin({}),
-        new ReactRefreshWebpackPlugin()
+        new ReactRefreshWebpackPlugin({ overlay: false })
     ];
 };

@@ -5,5 +5,7 @@
   },
   "язык": "English",
   "открыть": "Toggle",
-  "Страница не найдена": "404 Not Found"
+  "Страница не найдена": "404 Not Found",
+  "Непредвиденная ошибка": "An unexpected error has occurred",
+  "Обновить страницу": "Reload page"
 }

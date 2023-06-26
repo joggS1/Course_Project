@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
+import { BugButton } from '@/app/providers/ErrorBoundary';
 import { classNames } from '@/shared/lib';
 import { AppLink } from '@/shared/ui/AppLink';
 
@@ -24,6 +25,9 @@ export const Navbar = (props: NavbarProps) => {
                     <AppLink to='/about' type='secondary'>
                         {t('страницы.онас')}
                     </AppLink>
+                </li>
+                <li>
+                    <BugButton />
                 </li>
             </ul>
         </nav>

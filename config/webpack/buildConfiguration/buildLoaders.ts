@@ -3,9 +3,7 @@ import type webpack from 'webpack';
 
 import type { BuildOptions } from './types';
 
-export const buildLoaders = ({
-    isDev
-}: Pick<BuildOptions, 'isDev'>): webpack.RuleSetRule[] => {
+export const buildLoaders = ({ isDev }: Pick<BuildOptions, 'isDev'>): webpack.RuleSetRule[] => {
     const typescriptLoader = {
         exclude: /node_modules/,
         test: /\.tsx?$/,
@@ -30,12 +28,7 @@ export const buildLoaders = ({
             loader: 'babel-loader',
             options: {
                 presets: ['@babel/preset-env'],
-                plugins: [
-                    [
-                        'i18next-extract',
-                        { locales: ['ru', 'en'], keyAsDefaultValue: true }
-                    ]
-                ]
+                plugins: [['i18next-extract', { locales: ['ru', 'en'], keyAsDefaultValue: true }]]
             }
         }
     };
@@ -45,9 +38,7 @@ export const buildLoaders = ({
         options: {
             modules: {
                 auto: (path: string) => path.includes('.module.'),
-                localIdentName: isDev
-                    ? '[path][name]__[local]--[hash:base64:5]'
-                    : '[hash:base64:8]'
+                localIdentName: isDev ? '[path][name]__[local]--[hash:base64:5]' : '[hash:base64:8]'
             }
         }
     };

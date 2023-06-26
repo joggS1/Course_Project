@@ -6,9 +6,7 @@ describe('classNames', () => {
     });
     test('with additional params', () => {
         const expectedResult = 'class class1 class2';
-        expect(classNames('class', {}, ['class1', 'class2'])).toBe(
-            expectedResult
-        );
+        expect(classNames('class', {}, ['class1', 'class2'])).toBe(expectedResult);
     });
     test('with mods params', () => {
         const expectedResult = 'class class3 class5 class1 class2';

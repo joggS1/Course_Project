@@ -20,13 +20,7 @@ export const Sidebar = (props: SidebarProps) => {
         setCollapsed((prevState) => !prevState);
     };
     return (
-        <div
-            className={classNames(
-                styles.Sidebar,
-                { [styles.collapsed]: collapsed },
-                [className]
-            )}
-        >
+        <div className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [className])}>
             <Button theme='outlined' onClick={toggleSidebar}>
                 {t('открыть')}
             </Button>

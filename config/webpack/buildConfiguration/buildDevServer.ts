@@ -4,9 +4,7 @@ import type { Configuration
 
 import type { BuildOptions } from './index';
 
-export const buildDevServer = ({
-    port
-}: Pick<BuildOptions, 'port'>): DevServerConfiguration => ({
+export const buildDevServer = ({ port }: Pick<BuildOptions, 'port'>): DevServerConfiguration => ({
     port,
     open: true,
     historyApiFallback: true,
