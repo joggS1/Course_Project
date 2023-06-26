@@ -2,11 +2,13 @@ import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import webpack from 'webpack';
+import {BundleAnalyzerPlugin} from 'webpack-bundle-analyzer'
 
 import type { BuildOptions } from './types';
 
 export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstance[] => {
     const {
+        analyze,
         isDev,
         paths: { indexHTML }
     } = options;
@@ -23,6 +25,9 @@ export const buildPlugins = (options: BuildOptions): webpack.WebpackPluginInstan
             IS_DEV: JSON.stringify(isDev)
         }),
         new webpack.HotModuleReplacementPlugin({}),
-        new ReactRefreshWebpackPlugin({ overlay: false })
+        new ReactRefreshWebpackPlugin({ overlay: false }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: analyze ? 'server' : 'disabled'
+        })
     ];
 };

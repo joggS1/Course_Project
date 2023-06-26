@@ -7,12 +7,14 @@ export interface BuildPaths {
 }
 
 export interface BuildOptions {
+    analyze: boolean;
     mode: BuildMode;
     paths: BuildPaths;
     isDev: boolean;
     port: number;
 }
 export interface BuildEnvironmentVariables {
+    analyze: boolean | undefined;
     port: number | undefined;
     mode: BuildMode | undefined;
 }
