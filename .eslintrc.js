@@ -18,6 +18,12 @@ module.exports = {
         parserOptions: {
             project: ['tsconfig.json']
         }
+    },
+    {
+        files: ['**/src/**/*.test.{ts,tsx}'],
+        rules: {
+            'i18next/no-literal-string': 'off'
+        }
     }],
     parserOptions: {
         ecmaFeatures: {
@@ -95,5 +101,5 @@ module.exports = {
         ],
         'i18next/no-literal-string': ['error', { markupOnly: true }],
         'max-len': ['error', { "ignoreComments" : true, "code": 100 }]
-    }
+    },
 };

@@ -14,7 +14,7 @@ export default (env: BuildEnvironmentVariables) => {
     };
 
     const mode = env.mode ?? 'development';
-    const analyze = Boolean(env.analyze) 
+    const analyze = Boolean(env.analyze);
     const isDev = mode === 'development';
     const port = env.port ?? 3000;
     const config: webpack.Configuration = buildWebpackConfig({

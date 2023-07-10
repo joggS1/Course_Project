@@ -3,7 +3,9 @@
  * https://jestjs.io/docs/configuration
  */
 
-export default {
+import type { Config } from '@jest/types';
+
+const config: Config.InitialOptions = {
     // All imported modules in your tests should be mocked automatically
     // automock: false,
 
@@ -135,8 +137,19 @@ export default {
     // testLocationInResults: false,
 
     // The glob patterns Jest uses to detect test files
-    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)']
+    modulePaths: ['<rootDir>src'],
+    moduleNameMapper: {
+        '\\.svg': '<rootDir>/config/jest/svgrMock.tsx',
+        '\\.s?css$': 'identity-obj-proxy',
+        '@/(.*)': '<rootDir>/src/$1'
+    },
+    // transform: {
+    //     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
+    //       '<rootDir>/config/jest/jestEmptyComponent.js',
+    //   },
+    testMatch: ['<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'],
 
+    setupFilesAfterEnv: ['<rootDir>/config/jest/setupTests.ts']
     // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
     // testPathIgnorePatterns: [
     //   "\\\\node_modules\\\\"
@@ -178,3 +191,5 @@ export default {
     // Whether to use watchman for file crawling
     // watchman: true,
 };
+
+export default config;

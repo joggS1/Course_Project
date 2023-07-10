@@ -7,12 +7,12 @@
     "noImplicitAny": true,
     "module": "ESNext",
     // В какую спецификацию компилируем: для поддержки большинства браузеров
-    "target": "esnext",
+    "target": "es5",
     
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     },
     // Компилятор будет обрабатывать не только TS файлы, но и JS файлы
     "allowJs": true,
@@ -45,5 +45,9 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
-  }
+  },
+  // "include": [
+  //   "./config/jest/setupTests.ts",
+  //   "./src/app/types/global.d.ts"
+  // ]
 }
