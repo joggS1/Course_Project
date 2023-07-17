@@ -24,7 +24,7 @@ export const Sidebar = (props: SidebarProps) => {
             className={classNames(styles.Sidebar, { [styles.collapsed]: collapsed }, [className])}
             data-testid='sidebar'
         >
-            <Button data-testid='sidebar-toggle' theme='outlined' onClick={toggleSidebar}>
+            <Button data-testid='sidebar-toggle' theme='clear' onClick={toggleSidebar}>
                 {t('открыть')}
             </Button>
             <div className={styles.swtichers}>

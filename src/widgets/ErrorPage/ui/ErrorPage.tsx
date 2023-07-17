@@ -21,7 +21,7 @@ export const ErrorPage = (props: ErrorPageProps) => {
     return (
         <div className={classNames(styles.ErrorPage, {}, [className])}>
             <p>{t('Непредвиденная ошибка')}</p>
-            <Button theme='outlined' onClick={handleClick}>
+            <Button theme='clear' onClick={handleClick}>
                 {t('Обновить страницу')}
             </Button>
         </div>

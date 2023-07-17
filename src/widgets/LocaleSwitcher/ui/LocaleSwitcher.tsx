@@ -22,7 +22,7 @@ export const LocaleSwitcher = (props: LocaleSwitcherProps) => {
     return (
         <Button
             className={classNames(styles.LocaleSwitcher, {}, [className])}
-            theme='outlined'
+            theme='clear'
             onClick={changeLanguage}
         >
             {t('язык')}

@@ -14,7 +14,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
     const { toggleTheme, theme } = useTheme();
     return (
         <div className={classNames(styles.ThemeSwitcher, {}, [className])}>
-            <Button theme='outlined' onClick={toggleTheme}>
+            <Button theme='clear' onClick={toggleTheme}>
                 <ThemeIcon fill={theme !== Theme.DARK ? '#000' : '#fff'} />
             </Button>
         </div>

@@ -7,15 +7,22 @@
     }
 }
 
-.outlined {
+.clear {
     padding: 0;
     margin: 0;
     bottom: none;
     border: none;
     background: none;
+    color: var(--primary-color);
     outline: none;
 }
 
-// .primary {}
+.primary {
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
 
 // .secondary {}
