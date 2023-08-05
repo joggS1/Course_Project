@@ -1,2 +1,2 @@
-export * from './buildCssLoaders'
-export * from './svgLoader'
+export * from './buildCssLoaders';
+export * from './svgLoader';

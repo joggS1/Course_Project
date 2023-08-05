@@ -18,5 +18,3 @@ type Story = StoryObj<typeof ErrorPage>;
 export const Light: Story = {};
 export const Dark: Story = {};
 Dark.decorators = [ThemeDecorator(Theme.DARK)];
-
-

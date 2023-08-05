@@ -1,4 +1,4 @@
-import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 export const buildCSSLoaders = (isDev: boolean) => {
     const styleLoader = isDev ? 'style-loader' : MiniCssExtractPlugin.loader;
@@ -15,5 +15,5 @@ export const buildCSSLoaders = (isDev: boolean) => {
         test: /\.s[ac]ss$/i,
         use: [styleLoader, cssLoader, 'sass-loader']
     };
-    return styleLoaders
-}
+    return styleLoaders;
+};

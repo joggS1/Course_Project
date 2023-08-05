@@ -21,14 +21,14 @@ export default ({ config }: { config: Configuration }) => {
     };
 
     config.module.rules = config.module.rules.map((rule: RuleSetRule) => {
-        if(/svg/.test(rule.test as string)){
-            return {...rule, exclude: /.svg$/i}
+        if (/svg/.test(rule.test as string)) {
+            return { ...rule, exclude: /.svg$/i };
         }
-        return rule
-    } )
+        return rule;
+    });
 
-    config.module.rules.push(svgLoader)
-    
-    config.module.rules.push(buildCSSLoaders(true))
+    config.module.rules.push(svgLoader);
+
+    config.module.rules.push(buildCSSLoaders(true));
     return config;
 };

@@ -1,3 +1,3 @@
 export { StyleDecorator } from './styleDecorator';
-export { ThemeDecorator } from './themeDecorator'
-export { RouterDecorator } from './routerDecorator'
+export { ThemeDecorator } from './themeDecorator';
+export { RouterDecorator } from './routerDecorator';
