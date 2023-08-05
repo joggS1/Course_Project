@@ -17,12 +17,12 @@ export const Navbar = (props: NavbarProps) => {
         <nav className={classNames(styles.Navbar, {}, [className])}>
             <ul className={classNames(styles.Menu_items, {}, [])}>
                 <li>
-                    <AppLink to='/' type='secondary'>
+                    <AppLink to='/' type='primary'>
                         {t('страницы.главная')}
                     </AppLink>
                 </li>
                 <li>
-                    <AppLink to='/about' type='secondary'>
+                    <AppLink to='/about' type='primary'>
                         {t('страницы.онас')}
                     </AppLink>
                 </li>
